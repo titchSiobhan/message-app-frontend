@@ -28,7 +28,7 @@ function HomePage() {
     async function findUser(event) {
         event.preventDefault();
         const searchUser = search.trim();
-       const response = await authFetch(`http://localhost:3000/chat`, {
+       const response = await authFetch(`https://message-app-backend-jfnx.onrender.com/chat`, {
         method: 'POST',
             body: JSON.stringify({searchUser}) ,
        });

@@ -12,7 +12,7 @@ function SignUp() {
     async function signUpPost(event) {
         event.preventDefault();
         const {userName, email, password} = event.target.elements;
-        const createAccount = await fetch('http://localhost:3000/sign-up', {
+        const createAccount = await fetch('https://message-app-backend-jfnx.onrender.com/sign-up', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'

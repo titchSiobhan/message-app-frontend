@@ -27,7 +27,7 @@ export function UserProvider({ children }) {
             const storedToken = localStorage.getItem('token');
             if (!storedToken) return;
             try {
-                const response = await authFetch('http://localhost:3000/me');
+                const response = await authFetch('https://message-app-backend-jfnx.onrender.com/me');
                 const data = await response.json();
                 // const {user , token} = data
                 

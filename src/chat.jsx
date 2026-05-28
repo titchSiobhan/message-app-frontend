@@ -16,7 +16,7 @@ function GetChat() {
 	
 		async function getMessages() {
 			const response = await authFetch(
-				`http://localhost:3000/conversation/messages/${conversationId}`,
+				`https://message-app-backend-jfnx.onrender.com/conversation/messages/${conversationId}`,
 			);
 
 			const data = await response.json();
@@ -56,7 +56,7 @@ function openSidebar() {
         event.preventDefault();
         const messageText = sendMessage
 
-       await authFetch(`http://localhost:3000/conversation/${conversationId}/send`, {
+       await authFetch(`https://message-app-backend-jfnx.onrender.com/conversation/${conversationId}/send`, {
             method: 'POST',
             body: JSON.stringify({ messageText }),
         });

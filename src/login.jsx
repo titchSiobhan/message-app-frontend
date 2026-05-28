@@ -10,7 +10,7 @@ const navigate = useNavigate();
 
     async function handleSubmit(event) {
         event.preventDefault();
-        const response = await fetch('http://localhost:3000/login', {
+        const response = await fetch('https://message-app-backend-jfnx.onrender.com/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -24,7 +24,7 @@ const navigate = useNavigate();
         }
         
         localStorage.setItem('token', data.token);
-        const meResponse = await authFetch('http://localhost:3000/me');
+        const meResponse = await authFetch('https://message-app-backend-jfnx.onrender.com/me');
         const meData = await meResponse.json();
         setUser({ ...meData.user, token: data.token });
 
