@@ -65,7 +65,7 @@ function openSidebar() {
 
     }
     	async function getConversation() {
-		console.log(user.userName);
+		
 		const convos = user.participants.map(
 			(participant) => participant.conversation,
 		);
@@ -79,7 +79,7 @@ function openSidebar() {
 	}, [user]);
 
 
-	console.log('messages:', messages);
+	
 	return (
 		<>
         

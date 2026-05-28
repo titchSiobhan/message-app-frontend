@@ -18,7 +18,7 @@ const navigate = useNavigate();
             body: JSON.stringify({ email, password })
         });
         const data = await response.json();
-        console.log('data user',data.user.userName);
+       
         if (!response.ok) {
             return console.log('Login failed', data.error);
         }

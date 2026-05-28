@@ -11,7 +11,7 @@ function HomePage() {
 	const navigate = useNavigate();
 
 	async function getConversation() {
-		console.log(user.userName);
+		
 		const convos = user.participants.map(
 			(participant) => participant.conversation,
 		);
@@ -33,8 +33,7 @@ function HomePage() {
             body: JSON.stringify({searchUser}) ,
        });
         const data = await response.json();
-        console.log(data);
-        console.log(data.existing);
+        
    
         if (data.participants) {
             navigate(`/chat/${data.participants[0].conversationId}`);
